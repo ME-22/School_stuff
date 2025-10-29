@@ -1,0 +1,48 @@
+// Fuck you and the need to add comments to this simple code
+// it's no comments or all the comments :)
+import java.util.Scanner;
+public class App {
+    // erm generates the Email (as the name implies)
+    public static String generateEmail(String name, String lastname, String domain) {
+        // adds the name, lastname and the domain into and email and then returns it
+        return name.toLowerCase() + "." + lastname.toLowerCase() + "@" + domain.toLowerCase();
+    }
+    // hmmm generates the Username (as the name implies)
+    public static String generateUsername(String name, String lastname) {
+        // gets the names first four characters and the lastnames last four characters and adds them together 
+        String username = name.toLowerCase().substring(0,4) + lastname.toLowerCase().substring(lastname.length()-4);
+        // returns the username
+        return username;
+    }
+    public static void main(String[] args) throws Exception {
+        // starts the scanner so the user can give inputs
+        Scanner scanner = new Scanner(System.in);
+
+        // prints the question to the console
+        System.out.print("Etunimi: ");
+        // saves the user input to the name
+        String name = scanner.nextLine();
+
+        // prints the question to the console
+        System.out.print("Sukunimi: ");
+        // saves the user input to the lastname
+        String lastname = scanner.nextLine();
+
+        // prints the question to the console
+        System.out.print("Yrityksen verkkotunnus: ");
+        // saves the user input to the domain
+        String domain = scanner.nextLine();
+
+        if(name.isEmpty() || lastname.isEmpty() || domain.isEmpty()){
+            // prints error message if some of the inputs are empty
+            System.out.println("Virhe! Jokin tiedoista puuttuu.");
+            // ends the program if some of the inputs are empty
+            return;
+        }else{
+            // calls the functions and prints the results for email
+            System.out.println(generateEmail(name, lastname, domain));
+            // calls the functions and prints the results for username
+            System.out.println(generateUsername(name, lastname));
+        }
+    }
+}
