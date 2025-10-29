@@ -1,18 +1,30 @@
+import java.util.ArrayList;
+import java.util.Scanner;
 public class App {
+	public static void main(String[] args) {
 
-    public void printGreater(int number1, int number2){
-        if(number1=number2){
-            System.out.println("The numbers are equal.");
+	    ArrayList<String> cars = new ArrayList<String>();
+	    cars.add("Kia");
+	    cars.add("Tesla");
+	    cars.add("BMW");
+	    cars.add("Renault");
+
+        for (String i : cars) {
+            System.out.println(i);
         }
-          
-        else if(number1<number2){
-            System.out.println(number2);
+
+        cars.add(1,"Ford");
+	    cars.remove(2);
+        cars.set(2,"Audi");
+        System.out.println("MODIFIED LIST");
+        for (String i : cars) {
+            System.out.println(i);
+	    }
+        cars.sort(null);
+        System.out.println("SORTED LIST");
+        for (String i : cars) {
+            System.out.println(i);
         }
-          
-        else{System.out.println(number1);};
-    }
-    public static void main(String[] args) throws Exception {
-        App app = new App();
-        app.printIt();
+
     }
 }
