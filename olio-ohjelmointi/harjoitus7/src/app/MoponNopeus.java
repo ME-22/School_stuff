@@ -1,6 +1,7 @@
+package app;
 import data.*;
 import java.util.Scanner;
-public class App {
+public class MoponNopeus {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         mopo mopo = new mopo(1000, "red", 250, 0, "Solifer", "pappa");

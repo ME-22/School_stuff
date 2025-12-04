@@ -6,7 +6,9 @@ public class kulkuneuvo {
 	private int maksimiNopeus;
 	private int nopeus;
 	
-	
+	public kulkuneuvo(){
+		
+	}	
 
 	public kulkuneuvo(float hinta, String vari, int maksimiNopeus, int nopeus) {
 		this.hinta = hinta;
@@ -14,7 +16,7 @@ public class kulkuneuvo {
 		this.maksimiNopeus = maksimiNopeus;
 		this.nopeus = nopeus;
 	}
-	
+
 	public float getHinta() {
 		return hinta;
 	}
