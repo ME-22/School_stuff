@@ -25,16 +25,13 @@ public class AddMopoToList {
         System.out.println("Anna mopon maksiminopeus: ");
         int maxSpeed = Integer.parseInt(scanner.nextLine());
 
-        System.out.println("Anna mopon nopeus: ");
-        int speed = Integer.parseInt(scanner.nextLine());
-
         System.out.println("Anna mopon moottorimerkki: ");
         String engineBrand = scanner.nextLine();
 
         System.out.println("Anna mopon tyyppi: ");
         String type = scanner.nextLine();
 
-        mopo newMopo = new mopo(cost, color, maxSpeed, speed, engineBrand, type);
+        mopo newMopo = new mopo(cost, color, maxSpeed, engineBrand, type);
         mopot.add(newMopo);
         System.out.println("Mopo lisätty!");
 

@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class MoponNopeus {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
-        mopo mopo = new mopo(1000, "red", 250, 0, "Solifer", "pappa");
+        mopo mopo = new mopo(1000, "red", 250, "Solifer", "pappa");
 
         while(true){
             System.out.println("Mopon nopeus on: " + mopo.getNopeus());
@@ -13,12 +13,12 @@ public class MoponNopeus {
             if(vastaus.equals("k")){
                 System.out.println("Kuinka paljon?");
                 int maara = Integer.parseInt(scanner.nextLine());
-                if(mopo.getMaksimiNopeus() < mopo.getNopeus() + maara){
-                    System.out.println("Et voi kiihdyttää enempää, maksimi nopeus on: " + mopo.getMaksimiNopeus());
-                    continue;
-                }else{
-                    mopo.kiihdyta(maara);
-                }
+                // if(mopo.getMaksimiNopeus() < mopo.getNopeus() + maara){
+                //     mopo.setNopeus(250);
+                // }else{
+                //     mopo.kiihdyta(maara);
+                // }
+                mopo.kiihdyta(maara);
             } else if(vastaus.equals("h")){
                 System.out.println("Kuinka paljon?");
                 int maara = Integer.parseInt(scanner.nextLine());

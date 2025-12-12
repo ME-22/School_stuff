@@ -10,11 +10,11 @@ public class kulkuneuvo {
 		
 	}	
 
-	public kulkuneuvo(float hinta, String vari, int maksimiNopeus, int nopeus) {
+	public kulkuneuvo(float hinta, String vari, int maksimiNopeus) {
 		this.hinta = hinta;
 		this.vari = vari;
 		this.maksimiNopeus = maksimiNopeus;
-		this.nopeus = nopeus;
+		this.nopeus = 0;
 	}
 
 	public float getHinta() {
@@ -39,14 +39,36 @@ public class kulkuneuvo {
 		return nopeus;
 	}
 	public void setNopeus(int nopeus) {
-		this.nopeus = nopeus;
+		if(nopeus > maksimiNopeus) {
+			this.nopeus = maksimiNopeus;
+		}
+		else if(nopeus < 0) {
+			this.nopeus = 0;
+		}
+		else {
+			this.nopeus = nopeus;
+		}
 	}
 
 	public void kiihdyta(int maara) {
+		if(maara + this.nopeus > maksimiNopeus) {
+			this.nopeus = maksimiNopeus;
+		}
+		else if(this.nopeus - maara < 0){
+			this.nopeus = 0;
+		}else{
 			this.nopeus += maara;
+		}
 	}
 
 	public void hidasta(int maara) {
+		if(this.nopeus - maara < 0) {
+			this.nopeus = 0;
+		}
+		else if(maara + this.nopeus > maksimiNopeus){
+			this.nopeus = maksimiNopeus;
+		}else{
 			this.nopeus -= maara;
+		}
 	}
 }

@@ -14,8 +14,8 @@ public class mopo extends kulkuneuvo {
     this.tyyppi = tyyppi;
   }
 
-  public mopo(float hinta, String vari, int maksimiNopeus, int nopeus, String moottorimerkki, String tyyppi) {
-    super(hinta, vari, maksimiNopeus, nopeus);
+  public mopo(float hinta, String vari, int maksimiNopeus, String moottorimerkki, String tyyppi) {
+    super(hinta, vari, maksimiNopeus);
     this.moottorimerkki = moottorimerkki;
     this.tyyppi = tyyppi;
   }

@@ -1,9 +1,9 @@
 package data;
 
 public class potkukelkka extends kulkuneuvo {
-  
-	public potkukelkka(float hinta, String vari, int maksimiNopeus, int nopeus) {
-    super(hinta, vari, maksimiNopeus, nopeus);
+
+	public potkukelkka(float hinta, String vari, int maksimiNopeus) {
+    super(hinta, vari, maksimiNopeus);
   }
 
   private int jalasPituus;
